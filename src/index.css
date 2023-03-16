@@ -75,7 +75,7 @@ section{
 }
 
 .btn:hover{
-  color: #fff;
+  color: #fff !important;
   background-color: #000c6bd0;
   
 }

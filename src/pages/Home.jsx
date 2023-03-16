@@ -3,6 +3,14 @@ import HeroSlider from '../components/Ul/HeroSlider';
 import Helmet from '../components/Helmet/Helmet';
 import { Container,Row,Col } from 'reactstrap';
 import FindCarForm from '../components/Ul/FindCarForm';
+import AboutSection from '../components/Ul/AboutSection';
+import ServicesList from '../components/Ul/ServicesList';
+import carData from '../assets/data/carData';
+import CarItem from '../components/Ul/CarItem';
+import BecomeDriveSection from '../components/Ul/BecomeDriveSection';
+import Testimonial from '../components/Ul/Testimonial';
+import BlogList from '../components/Ul/BlogList';
+
 const Home = () => {
     return <Helmet title='Home'>
         {/*======== hero section ====== */}
@@ -27,6 +35,63 @@ const Home = () => {
 
 
         </section>
+        {/*======= about section====== */}
+        <AboutSection/>
+
+        {/*====== services list */}
+        <section>
+        <Container>
+            <Row>
+                <Col lg='12' className='mb-5 text-center'>
+                    <h6 className="section__subtitle">See our</h6>
+                    <h2 className="section__title">Popular Srevices</h2>
+                </Col>
+                <ServicesList/>
+            </Row>
+
+        </Container>            
+        </section>
+        {/*======car item ====== */}
+        <section>
+        <Container>
+          <Row>
+            <Col lg="12" className="text-center mb-5">
+              <h6 className="section__subtitle">Come with</h6>
+              <h2 className="section__title">Hot Offers</h2>
+            </Col>
+
+            {carData.slice(0,6).map((item) => (
+              <CarItem item={item} key={item.id} />
+            ))}
+          </Row>
+        </Container>
+      </section>
+      {/*======BECOME A DRIVE =======*/}
+      <BecomeDriveSection/>
+      {/*========Testimonail */}
+      <section>
+        <Container>
+            <Row>
+                <Col lg='12' className='mb-4 text-center'>
+                    <h6 className="section__subtitle">Our clients says</h6>
+                    <h2 className="section__title">Testimonials</h2>
+                </Col>
+                <Testimonial/>
+            </Row>
+        </Container>
+      </section>
+      {/*=========blog-list====== */}
+      <section>
+        <Container>
+            <Row>
+                <Col lg='12' className='mb-4 text-center'>
+                    <h6 className="section__subtitle">Our clients says</h6>
+                    <h2 className="section__title">Testimonials</h2>
+                </Col>
+                <BlogList/>
+            </Row>
+        </Container>
+      </section>
 
     </Helmet>;
 }
