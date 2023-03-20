@@ -2,9 +2,10 @@ import React from 'react';
 import "../../styles/find-car-form.css"
 import'../../styles/find-car-form.css'
 import { Form,FormGroup } from 'reactstrap';
+
 const FindCarForm = () => {
-    return (
-        <Form className="form">
+  return (
+    <Form className="form">
       <div className=" d-flex align-items-center justify-content-between flex-wrap">
         <FormGroup className="form__group">
           <input type="text" placeholder="From address" required />
@@ -19,7 +20,7 @@ const FindCarForm = () => {
         </FormGroup>
 
         <FormGroup className="form__group">
-          <input 
+          <input
             className="journey__time"
             type="time"
             placeholder="Journey time"
@@ -38,8 +39,7 @@ const FindCarForm = () => {
         </FormGroup>
       </div>
     </Form>
-    );
-    
-}
- 
+  );
+};
+
 export default FindCarForm;
