@@ -97,7 +97,7 @@ const Footer = () => {
                 <Col lg='12'>
                     <div className="footer__botton">
                         <p className="section__description d-flex align-items-center justify-content-center gap-1 pt-4">Copyright ,{year}
-                        Developed by Muhibur Rahman.All rights reserved
+                        Developed by Mohammad Peyvasteh.All rights reserved
                         <i class="ri-copyright-line"></i>
                         </p>
                     </div>
